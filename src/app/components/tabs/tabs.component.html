@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Heading</h1>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere deserunt vero enim sunt et, alias aliquam ducimus asperiores reiciendis sequi animi, impedit id ipsa voluptatem fugiat nihil eius beatae.</p>
+</div>
+
+<div class="container">
+  <mat-tab-group #tabGroup [selectedIndex]="currentTabIndex">
+    <mat-tab label="First">
+      <div class="buttons">
+        <button (click)="onClickMax()" class="btn btn-orange">One</button>
+      </div>
+    </mat-tab>
+    <mat-tab label="Second">
+      <div class="buttons">
+        <button (click)="onClickMax()" class="btn btn-orange">Two</button>
+      </div>
+    </mat-tab>
+    <mat-tab label="Third">
+      <div class="buttons">
+        <button (click)="onClickMax()" class="btn btn-orange">Three</button>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

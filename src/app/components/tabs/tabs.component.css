@@ -1,0 +1,9 @@
+.container h1{
+  font-family: 'Playfair Display', serif;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

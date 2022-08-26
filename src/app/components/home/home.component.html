@@ -1,0 +1,29 @@
+<div class="big-box container">
+  <h2 class="title">Home Component</h2>
+  <p class="description">This app was created to learn and experiment with angular forms.</p>
+</div>
+
+<section>
+  <div class="top-container">
+    <div class="search-bar-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <input #messageFormInput matInput (keyup.enter)="onSearch(messageFormInput)" type="text" placeholder="Enter text here">
+        <mat-icon class="icon-search" (click)="onSearch(messageFormInput)" matSuffix>search</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+    </div>
+    <div class="alert-container">
+      <app-alert [alertType]="currentAlertType" [message]="message"></app-alert>
+    </div>
+  </div>
+  <div class="main-content">
+    <h1>Random Heading</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet magni impedit commodi consequuntur porro explicabo esse, corporis voluptates et praesentium, hic sunt quae fugiat ex excepturi? Laborum deleniti ad tempore! Labore facere dolor cupiditate voluptatum velit? Cupiditate deleniti asperiores debitis, voluptatibus numquam architecto odit sed atque obcaecati voluptate aliquam odio error molestias exercitationem enim. Odit vitae eos soluta neque?</p>
+  </div>
+
+  <div class="buttons-container">
+    <button (click)="onSuccess()" class="btn btn-success">Success</button>
+    <button (click)="onFailure()" class="btn btn-failure">Failure</button>
+  </div>
+</section>

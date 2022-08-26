@@ -1,0 +1,44 @@
+.alert-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.625rem 1rem;
+}
+
+.message p {
+  margin-bottom: 0;
+}
+
+.icon {
+  color: black;
+}
+
+.icon-container {
+  margin-right: 1rem;
+}
+
+.close-button {
+  margin-left: auto;
+}
+.close-button:hover {
+  cursor: pointer;
+}
+
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.failure {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.none {
+  visibility: hidden;
+}
