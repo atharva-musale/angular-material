@@ -1,15 +1,13 @@
 .alert-container {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-
-  border: 1px solid #ccc;
   border-radius: 4px;
   padding: 0.625rem 1rem;
 }
 
 .message p {
   margin-bottom: 0;
+  font-size: 1.2rem;
 }
 
 .icon {
@@ -41,4 +39,11 @@
 
 .none {
   visibility: hidden;
+}
+
+.icon-thumb-up {
+  color: #155724;
+}
+.icon-thumb-down {
+  color: #721c24;
 }

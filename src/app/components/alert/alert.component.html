@@ -1,6 +1,6 @@
 <div class="alert-container" [ngClass]="alertType">
   <div class="icon-container" *ngIf="alertType === 'success'; else failureIcon">
-    <mat-icon class="icon" matSuffix>thumb_up</mat-icon>
+    <mat-icon class="icon icon-thumb-up" matSuffix>thumb_up</mat-icon>
   </div>
   <div class="message">
     <p>{{ message }}</p>
@@ -11,6 +11,6 @@
 </div>
 <ng-template #failureIcon>
   <div class="icon-container">
-    <mat-icon class="icon" matSuffix>thumb_down</mat-icon>
+    <mat-icon class="icon icon-thumb-down" matSuffix>thumb_down</mat-icon>
   </div>
 </ng-template>

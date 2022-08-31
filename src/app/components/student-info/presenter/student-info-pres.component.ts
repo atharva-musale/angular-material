@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentInfoPresComponent implements OnInit {
 
+  public name = 'efnekfmlwkemf';
+
   constructor() { }
 
   ngOnInit(): void {

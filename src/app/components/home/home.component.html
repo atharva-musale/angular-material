@@ -8,9 +8,11 @@
     <div class="search-bar-container">
       <mat-form-field appearance="outline">
         <mat-label>Search</mat-label>
-        <input #messageFormInput matInput (keyup.enter)="onSearch(messageFormInput)" type="text" placeholder="Enter text here">
+        <input #messageFormInput matInput
+               type="text"
+               placeholder="Enter text here"
+               (keyup.enter)="onSearch(messageFormInput)" >
         <mat-icon class="icon-search" (click)="onSearch(messageFormInput)" matSuffix>search</mat-icon>
-        <!-- <mat-hint>Hint</mat-hint> -->
       </mat-form-field>
     </div>
     <div class="alert-container">

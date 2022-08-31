@@ -15,14 +15,15 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialExampleModule } from 'src/material.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { AlertComponent } from './components/alert/alert.component';
+import { StudentInfoModule } from './components/student-info/student-info.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
     TopNavComponent,
-    StudentInfoContComponent,
-    StudentInfoPresComponent,
+    // StudentInfoContComponent,
+    // StudentInfoPresComponent,
     HomeComponent,
     AlertComponent
   ],
@@ -30,12 +31,11 @@ import { AlertComponent } from './components/alert/alert.component';
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
     LayoutModule,
     MaterialExampleModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
     RouterModule,
+    StudentInfoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

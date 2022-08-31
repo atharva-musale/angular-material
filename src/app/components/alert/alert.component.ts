@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AlertType } from 'src/app/models/alert-types';
 
 @Component({
   selector: 'app-alert',
@@ -10,21 +11,24 @@ export class AlertComponent implements OnInit {
    * To indicate the type of message
    */
   @Input()
-  public alertType: string = 'none';
+  public alertType = AlertType.NONE;
 
   /**
    * The message
    */
   @Input()
-  public message: string = 'This is a standard message. For a customised one, enter into the searchbar.';
+  public message?: string;
 
-  constructor() { }
+  constructor() {
+    console.log('Constructor: ',this.message);
+  }
 
   ngOnInit(): void {
+    console.log('On init: ',this.message);
   }
 
   public onClose() {
-    this.alertType = 'none';
+    this.alertType = AlertType.NONE;
   }
 
 }

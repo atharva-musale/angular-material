@@ -1,5 +1,6 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { distinctUntilChanged, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -27,9 +28,13 @@ export class AppComponent implements AfterViewInit, OnInit {
   constructor(private renderer: Renderer2, private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
-    this.breakpointObserver.observe(['(max-width: 700px)']).subscribe(() => {
-      this.isSidenavOpen = false;
-    });
+    this.breakpointObserver.observe(['(max-width: 700px)']).pipe(
+      map(val=> val.matches),
+      distinctUntilChanged())
+      .subscribe((isOpen) => {
+        this.isSidenavOpen = !isOpen;
+        console.log(isOpen);
+      });
   }
 
   ngAfterViewInit(): void {
