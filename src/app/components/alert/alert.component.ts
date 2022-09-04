@@ -19,12 +19,9 @@ export class AlertComponent implements OnInit {
   @Input()
   public message?: string;
 
-  constructor() {
-    console.log('Constructor: ',this.message);
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    console.log('On init: ',this.message);
   }
 
   public onClose() {

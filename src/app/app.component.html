@@ -1,6 +1,6 @@
 <app-top-nav #topNav (toggleSidenav)="toggleSidenav()"></app-top-nav>
 <mat-sidenav-container #sidenavContainer class="example-sidenav-container">
-  <mat-sidenav #snav mode="side" [opened]="isSidenavOpen">
+  <mat-sidenav #snav mode="side" [opened]="isSidenavOpen$ | async">
     <div class="nav-item">
       Sidenav
     </div>

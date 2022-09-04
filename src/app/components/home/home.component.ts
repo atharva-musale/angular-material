@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertType } from 'src/app/models/alert-types';
+import { CurrentPathService } from 'src/app/services/current-path/current-path.service';
 
 @Component({
   selector: 'app-home',
@@ -17,9 +18,10 @@ export class HomeComponent implements OnInit {
    */
   public message?: string;
 
-  constructor() { }
+  constructor(private currentPathService: CurrentPathService) { }
 
   ngOnInit(): void {
+    this.currentPathService.setCurrentPath('home');
   }
 
   /**
