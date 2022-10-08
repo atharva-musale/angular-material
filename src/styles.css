@@ -39,16 +39,25 @@ h5 {
 }
 
 p,
-span,
 a {
   font-family: Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0.3px;
   line-height: 23px;
 }
 
+/* layout */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1;
+}
+
 /* Container */
 .container {
-  width: min(40rem, 80%);
+  width: min(45rem, 85%);
   padding: 2rem;
   background-color: var(--bg-gray);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
@@ -63,7 +72,6 @@ a {
   border: none;
   color: var(--bg-gray);
   transition: all ease-in-out 400ms;
-  margin-left: 0.7rem;
 }
 
 .btn-orange {
@@ -109,14 +117,4 @@ a {
   cursor: pointer;
   background: var(--text-orange-dark);
   color: white;
-}
-
-
-/* mat overrride */
-.mat-tab-labels {
-  justify-content: space-around;
-}
-
-.mat-form-field-wrapper {
-  padding-bottom: 0;
 }
